@@ -3,3 +3,4 @@ Create a reusable React SearchBar component with a controlled input field and se
 Create a reusable JavaScript service that fetches recipes from TheMealDB API using fetch(). Handle errors and return recipe data.
 Create a React custom hook called useRecipes that fetches recipes, manages loading, errors and recipe state.
 Create a reusable RecipeCard component displaying the recipe image, title, category and area in a clean card layout.
+Create a reusable React favorite button component that stores favorite recipes in LocalStorage. Clicking the heart should toggle between saved and unsaved states.

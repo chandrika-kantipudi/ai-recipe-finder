@@ -4,9 +4,12 @@ import SearchBar from "./components/SearchBar";
 import RecipeCard from "./components/RecipeCard";
 import useRecipes from "./hooks/useRecipes";
 import "./App.css";
+import { useState } from "react";
+import RecipeModal from "./components/RecipeModal";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
 
   const { recipes, loading, fetchRecipes } = useRecipes();
 
@@ -30,12 +33,25 @@ function App() {
 
       <div className="recipes">
         {recipes.map((recipe) => (
-          <RecipeCard
-            key={recipe.idMeal}
-            recipe={recipe}
-          />
+          <div
+          key={recipe.idMeal}
+          onClick={() => setSelectedRecipe(recipe)}
+          >
+          <RecipeCard recipe={recipe} />
+</div>
         ))}
       </div>
+
+      {selectedRecipe && (
+        <RecipeModal
+          recipe={selectedRecipe}
+          onClose={() => setSelectedRecipe(null)}
+        />
+      )}
+      <RecipeModal
+  recipe={selectedRecipe}
+  onClose={() => setSelectedRecipe(null)}
+/>
     </>
   );
 }

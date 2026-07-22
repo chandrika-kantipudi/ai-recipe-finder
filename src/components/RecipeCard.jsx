@@ -1,7 +1,11 @@
+import FavoritesButton from "./FavoritesButton";
+
 function RecipeCard({ recipe }) {
   return (
     <div className="card">
       <img src={recipe.strMealThumb} alt={recipe.strMeal} />
+
+      <FavoritesButton recipe={recipe} />
 
       <h2>{recipe.strMeal}</h2>
 
