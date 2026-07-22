@@ -1,0 +1,1 @@
+Create a responsive React Header component for an AI Recipe Finder application. The header should display the application title and a short tagline. Use semantic HTML and simple CSS.

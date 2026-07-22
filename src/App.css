@@ -1,10 +1,20 @@
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f4f4f4;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
 }
 
-h1{
-  text-align:center;
-  padding:30px;
+.header {
+  background: #ff6b35;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  margin-top: 10px;
 }
