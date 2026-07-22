@@ -31,6 +31,21 @@ function App() {
 
       {loading && <h2 style={{ textAlign: "center" }}>Loading...</h2>}
 
+      {!loading && recipes.length === 0 && (
+  <h2 style={{ textAlign: "center" }}>
+    Search for a recipe 🍕
+  </h2>
+)}
+
+{!loading &&
+  recipes.length === 0 &&
+  searchTerm !== "" && (
+    <h2 style={{ textAlign: "center", color: "red" }}>
+      No recipes found 😔
+    </h2>
+)}
+
+<div className="recipes"></div>
       <div className="recipes">
         {recipes.map((recipe) => (
           <div
